@@ -1,0 +1,160 @@
+.city-widget {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 280px;
+}
+
+.city-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.widget-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.widget-header .country {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.widget-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric .label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.metric .value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.metric .value.positive {
+  color: #059669;
+}
+
+.metric .value.neutral {
+  color: #d97706;
+}
+
+.widget-chart {
+  height: 80px;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city-widget {
+    min-width: 250px;
+    margin-bottom: 0.5rem;
+    padding: 0.875rem;
+  }
+
+  .widget-header h3 {
+    font-size: 1.125rem;
+  }
+
+  .widget-header .country {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .widget-metrics {
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .metric .label {
+    font-size: 0.7rem;
+  }
+
+  .metric .value {
+    font-size: 0.9rem;
+  }
+
+  .widget-chart {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .city-widget {
+    min-width: 220px;
+    padding: 0.75rem;
+  }
+
+  .widget-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .widget-header h3 {
+    font-size: 1rem;
+  }
+
+  .widget-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .widget-chart {
+    height: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .city-widget {
+    min-width: 200px;
+  }
+
+  .widget-metrics {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .metric .label {
+    margin-bottom: 0;
+  }
+}
